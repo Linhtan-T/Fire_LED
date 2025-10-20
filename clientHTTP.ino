@@ -3,8 +3,8 @@
 #include <ArduinoJson.h>
 
 // ====== EDIT THESE ======
-const char* WIFI_SSID = "Can Cervera";
-const char* WIFI_PASS = "637457896";
+const char* WIFI_SSID = "";
+const char* WIFI_PASS = "";
 
 // Your Mac's IP shown by Flask when it runs on 0.0.0.0 (or `ipconfig getifaddr en0` on macOS)
 const char* LAPTOP_IP = "192.168.1.70";
