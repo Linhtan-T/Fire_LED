@@ -1,4 +1,9 @@
 Run fires.py code as HTTP Server on your own laptop 
 
 
-Run the other code as the client 
+Save your laptops IP-Adress (to paste into the CLientHTTP.ino File)
+
+
+Paste the IP-Adress in the CLientHTTP.ino File
+
+Run the CLientHTTP.ino File
