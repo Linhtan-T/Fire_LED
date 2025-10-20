@@ -2,17 +2,31 @@
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 
+#include <FastLED.h>
+#define NUM_LEDS 100 //Set your number of LEDs here
+#define DATA_PIN 18 //Set your Data-Pin here
+
+CRGB leds[NUM_LEDS];
+
 // ====== EDIT THESE ======
-const char* WIFI_SSID = "";
+const char* WIFI_SSID = "_Free_Wifi_Berlin";
 const char* WIFI_PASS = "";
 
 // Your Mac's IP shown by Flask when it runs on 0.0.0.0 (or `ipconfig getifaddr en0` on macOS)
-const char* LAPTOP_IP = "192.168.1.70";
+const char* LAPTOP_IP = "172.16.40.132";
 const uint16_t LAPTOP_PORT = 5055;
 const int DAYS = 1;                // 1..7
 const uint32_t POLL_MS = 10000;    // pull every 10s
 
 unsigned long lastPoll = 0;
+
+//led Numbers
+int asia;
+int africa;
+int europe;
+int sa;
+int australia;
+
 
 void fetchAndPrint() {
   if (WiFi.status() != WL_CONNECTED) {
@@ -85,6 +99,12 @@ void setup() {
   ensureWifi();
   // first fetch immediately
   fetchAndPrint();
+
+  //LED Setting
+  pinMode(DATA_PIN,OUTPUT);
+  FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS);
+  FastLED.clear();
+  FastLED.show();
 }
 
 void loop() {
@@ -94,6 +114,31 @@ void loop() {
     lastPoll = now;
     fetchAndPrint();
   }
+
+  
+  int ledAsia = asia / 100;
+  int ledAfrica = africa / 100;
+  int ledEuro = europe / 10;
+  int ledAus = australia / 100;
+  int ledSA = sa / 100;
+
+  for (int i = 0; i < ledAsia; i++){
+    leds[i] = (0,0,255);
+  }
+  for (int i = 20; i < 20 + ledAfrica; i++){
+    leds[i] = (0,0,255);
+  }
+  for (int i = 40; i < 40 + ledEuro; i++){
+    leds[i] = (0,0,255);
+  }
+  for (int i = 60; i < 60 + ledAus; i++){
+    leds[i] = (0,0,255);
+  }
+  for (int i = 80; i < 80 + ledSA; i++){
+    leds[i] = (0,0,255);
+  }
+  
+   FastLED.show();
+   delay(50);
+
 }
-
-
