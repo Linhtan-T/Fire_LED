@@ -10,11 +10,10 @@ CRGB leds[NUM_LEDS];
 #include <ArduinoOTA.h>
 
 // TODO: set these
-const char* WIFI_SSID = "Healthy_Design_&_Sick_Machines";
-const char* WIFI_PSK  = "Bakterien_und_Viren";
-const char* MQTT_HOST = "192.168.178.82"; // Pi's IP
+const char* WIFI_SSID = "";
+const char* WIFI_PSK  = "";
+const char* MQTT_HOST = ""; // Pi's IP
 
-//int ledsNums[16] = {2, 5, 8, 11, 15, 18, 22, 25, 27, 29, 31, 35, 39, 42, 47, 49};
 
 WiFiClient net;
 PubSubClient mqtt(net);
