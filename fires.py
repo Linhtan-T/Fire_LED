@@ -3,7 +3,7 @@ import requests, time
 
 APP = Flask(__name__)
 
-MAP_KEY = "0486f2822b77feeeddec7e83b1c3f73b"  # put your key here
+MAP_KEY = ""  # put your key here
 FIRMS_URL = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/{key}/VIIRS_NOAA20_NRT/world/{days}"
 
 # Non-overlapping rough boxes
