@@ -41,7 +41,10 @@ void onMsg(char* topic, byte* payload, unsigned int len) {
 
   
   for(int i = led_nums - 1; i >= led_nums - scaledFires; i--){
-    leds[i] =  CRGB::Yellow;
+    leds[i] =  CRGB::Orange;
+  }
+  for(int i = led_nums - scaledFires; i >= 0; i--){
+    leds[i] = CRGB:: Yellow;
   }
   FastLED.show();
   delay(50);
