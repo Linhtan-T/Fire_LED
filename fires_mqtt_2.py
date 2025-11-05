@@ -6,7 +6,7 @@ from paho.mqtt import client as mqtt
 BROKER   = "127.0.0.1"      # Pi running mosquitto
 TOPIC    = "fires"          # base topic
 DAYS     = 1                # last N days
-MAP_KEY  = "0486f2822b77feeeddec7e83b1c3f73b"
+MAP_KEY  = ""
 URL      = f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/{MAP_KEY}/VIIRS_NOAA20_NRT/world/{DAYS}"
 
 # Rough continent boxes: (lat_min, lat_max, lon_min, lon_max)
