@@ -27,7 +27,7 @@ PubSubClient mqtt(net);
 
 const char* hostname = "Austrlia";
 const char* subTopic = "australia";
-int scale = 1000;
+int scale = 500;
 
 void onMsg(char* topic, byte* payload, unsigned int len) {
   String msg; msg.reserve(len);
