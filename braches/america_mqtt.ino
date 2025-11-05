@@ -14,8 +14,8 @@ CRGB leds[NUM_LEDS];
 #include <WiFiUdp.h>
 
 // TODO: set these
-const char* WIFI_SSID = "Healthy_Design_&_Sick_Machines";
-const char* WIFI_PSK  = "Bakterien_und_Viren";
+const char* WIFI_SSID = "";
+const char* WIFI_PSK  = "";
 const char* MQTT_HOST = "192.168.178.74"; // Pi's IP
 
 int led_nums = 22;
