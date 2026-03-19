@@ -21,7 +21,7 @@
 const char* WIFI_SSID     = "YOUR_WIFI";
 const char* WIFI_PASSWORD = "YOUR_PASS";
 
-const char* MQTT_HOST = "192.168.1.70";  // IP of your broker (e.g., Pi)
+const char* MQTT_HOST = "";  // IP of your broker (e.g., Pi)
 const uint16_t MQTT_PORT = 1883;
 const char* MQTT_USER = nullptr; // or "user"
 const char* MQTT_PASS = nullptr; // or "pass"
