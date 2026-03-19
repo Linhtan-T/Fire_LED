@@ -16,7 +16,7 @@ CRGB leds[NUM_LEDS];
 // TODO: set these
 const char* WIFI_SSID = "";
 const char* WIFI_PSK  = "";
-const char* MQTT_HOST = "192.168.178.74"; // Pi's IP
+const char* MQTT_HOST = ""; // Pi's IP
 
 int led_nums = 24;
 
