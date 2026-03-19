@@ -3,7 +3,7 @@
 import time, requests
 from paho.mqtt import client as mqtt
 
-BROKER   = "127.0.0.1"      # Pi running mosquitto
+BROKER   = ""      # Pi running mosquitto
 TOPIC    = "fires"          # base topic
 DAYS     = 1                # last N days
 MAP_KEY  = ""
