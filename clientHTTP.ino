@@ -9,11 +9,11 @@
 CRGB leds[NUM_LEDS];
 
 // ====== EDIT THESE ======
-const char* WIFI_SSID = "_Free_Wifi_Berlin";
+const char* WIFI_SSID = "";
 const char* WIFI_PASS = "";
 
 // Your Mac's IP shown by Flask when it runs on 0.0.0.0 (or `ipconfig getifaddr en0` on macOS)
-const char* LAPTOP_IP = "172.16.40.132";
+const char* LAPTOP_IP = "";
 const uint16_t LAPTOP_PORT = 5055;
 const int DAYS = 1;                // 1..7
 const uint32_t POLL_MS = 10000;    // pull every 10s
